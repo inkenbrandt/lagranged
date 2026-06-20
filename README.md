@@ -13,11 +13,7 @@ covariance matrix).
 > ⚠️ **Research prototype.** Not a validated replacement for published footprint
 > models (Kljun FFP, Kormann–Meixner). Approximate parameterizations emit
 > `warnings`; see [`docs/limitations.md`](docs/limitations.md).
->
-> 🚧 **Scaffold status.** The package structure, input/config objects, MOST
-> profiles, gridding, contour, and plotting layers are in place and tested. The
-> stochastic trajectory engine (`stochastic` / `particles` / `touchdown`) is
-> stubbed and raises `NotImplementedError` when invoked.
+
 
 ## Install
 
