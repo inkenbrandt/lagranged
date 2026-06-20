@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "lagranged: backward Lagrangian stochastic flux footprints"
+abstract: >-
+  A research-grade Python package for estimating eddy-covariance flux footprints
+  using a backward Lagrangian stochastic particle model.
+type: software
+authors:
+  - family-names: Inkenbrandt
+    given-names: Paul
+version: 0.2.0
+date-released: 2026-06-20
+license: MIT
+keywords:
+  - eddy covariance
+  - flux footprint
+  - Lagrangian stochastic
+  - micrometeorology

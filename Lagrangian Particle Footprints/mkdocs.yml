@@ -1,0 +1,86 @@
+site_name: lagranged
+site_description: >-
+  Eddy-covariance flux footprints via a backward Lagrangian stochastic (bLS)
+  particle model.
+site_url: https://paulinkenbrandt.github.io/lagranged/
+repo_url: https://github.com/paulinkenbrandt/lagranged
+repo_name: paulinkenbrandt/lagranged
+copyright: Copyright &copy; Paul Inkenbrandt — MIT License
+
+# IMPLEMENTATION_PROMPTS.md is a development checklist, not user documentation;
+# keep it in the repo but out of the built site (and out of the nav check).
+exclude_docs: |
+  IMPLEMENTATION_PROMPTS.md
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - content.code.copy
+    - toc.follow
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Theory & assumptions: theory.md
+  - API reference: api.md
+  - Limitations & caveats: limitations.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: numpy
+            docstring_section_style: table
+            heading_level: 3
+            members_order: source
+            filters: ["!^_"]
+            merge_init_into_class: true
+            separate_signature: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            show_source: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
